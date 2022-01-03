@@ -31,6 +31,12 @@
       .button.is-warning:hover {
         background-color: #ffaa44;
       }
+
+      blockquote {
+        background-color: #dddddd;
+        padding: 5px;
+        margin: 5px;
+      }
     </style>
   </head>
   <body>
@@ -147,22 +153,105 @@
       </div>
 
     </section>
-    <div style="text-align: center" class="subtitle is-4"> 
-      See our
-      <a href="BP2022WeekendPrograms.html" class="regular">
-        2022 Weekend and Curriculum Courses
-      </a>
-      schedule!
-    </div>
-    <div> &nbsp; </div>
 
-    <div style="text-align: center" class="subtitle is-4"> 
-      Visit 
-      <a href="http://bodhipath.org/sb/" class="regular">
-        our main website
-      </a>
-      for more information.
-    </div>
-    <div> &nbsp; </div>
+    <section class="section">
+      <div class="columns">
+        <div class="column"></div>
+
+        <div class="column is-two-thirds has-text-centered">
+
+          <div style="text-align: center" class="subtitle is-4"> 
+            See our
+            <a href="BP2022WeekendPrograms.html" class="regular">
+              2022 Weekend and Curriculum Courses
+            </a>
+            schedule!
+          </div>
+          <div> &nbsp; </div>
+
+          <div style="text-align: center" class="subtitle is-4"> 
+            Visit 
+            <a href="http://bodhipath.org/sb/" class="regular">
+              our main website
+            </a>
+            for more information.
+          </div>
+          <div> &nbsp; </div>
+          <div> 
+            <span id="modal-dei-btn">
+              <img src="510px-Flag_of_Santa_Barbara_California.svg.png" width=110px height=50px alt="Santa Barbara City Flag" title="Santa Barbara City Flag">
+              <!-- see https://commons.wikimedia.org/wiki/File:Intersex-inclusive_pride_flag.svg for author and license of flag below --> 
+              <img src="Intersex-inclusive_pride_flag.svg.png" width=110px height=50px alt="Intersex inclusive pride flag" title="Intersex Inclusive Pride Flag">
+              <!-- see https://commons.wikimedia.org/wiki/File:LGBT_Gay_Trans_Pride_BLM_Fist_Flag.png for author and license of flag below -->
+              <img src="1600px-LGBT_Gay_Trans_Pride_BLM_Fist_Flag.png" width=110px height=50px alt="LGTB Gay Trans Pride BLM Fist Flag" title="LGTB Trans Pride BLM Fist Flag"> 
+              <img src="640px-Flag-karmapa.svg.png" width=110px height=50px alt="Karma Kagyud flag" title="16th Karmapa's Karma Kagyud Flag">
+            </span>
+          </div>
+        </div>
+        <div> &nbsp; </div>
+        <div class="column">
+        </div>
+      </section>
+
+      <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+
+          <div class='box'>
+            <h2 class='title'>
+              May all beings find happiness
+            </h2>
+            <content>
+              <p>
+              Many teachings of the Buddha emphasize the importance of developing genuine
+              lovingkindness and compassion towards everyone, without discrimation.
+            </p>
+            For example, In <b>The Jewel Ornament Of Liberation</b>, Gampopa writes:
+              <blockquote>
+                [O]ne should practice developing a pure desire for all sentient beings,
+                limitless as space, to have happiness and benefit.
+              </blockquote>
+              Bodhi Path Santa Barbara endeavors to create a safe and welcoming space
+              for all people who wish to deepen their spiritual journey inclusive of all
+              genders, races, sexual identities, ages, ethnicities, and other characteristics.<br>
+            </content>
+          </div>
+        </div>
+        <button class="modal-close is-large"
+          aria-label="close">
+          Model
+        </button>
+      </div>
+
+
+      <script>
+    // Bulma does not have JavaScript included,
+    // hence custom JavaScript has to be
+    // written to open or close the modal
+    const modal =
+          document.querySelector('.modal');
+    const btn =
+          document.querySelector('#modal-dei-btn')
+    const close =
+          document.querySelector('.modal-close')
+
+    btn.addEventListener('click',
+                         function () {
+      modal.style.display = 'block'
+    })
+
+    close.addEventListener('click',
+                           function () {
+      modal.style.display = 'none'
+    })
+      window.addEventListener('click',
+                            function (event) {
+      if (event.target.className === 'modal-background') {
+        modal.style.display = 'none'
+      }
+    })
+  </script>
+
+
   </body>
 </html>
